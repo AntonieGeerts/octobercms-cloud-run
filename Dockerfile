@@ -35,7 +35,7 @@ RUN { \
 
 COPY --chown=www-data:www-data ./ /var/www/html
 COPY docker-oc-entrypoint /usr/local/bin/
-
+COPY .npmignore /var/www/html
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
